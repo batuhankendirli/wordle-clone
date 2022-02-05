@@ -23,7 +23,6 @@ body {
 }
 
 .tile-container {
-  padding-top: 25px;
   width: 330px;
   margin-bottom: 30px;
 }
@@ -41,6 +40,11 @@ body {
   border: none;
   background-color: #818384;
   margin: 4px;
+  transition: all 0.3s;
+}
+
+.key-container button:active {
+  background-color: #1f1f1f;
 }
 
 .key-container button:nth-child(11) {
@@ -49,6 +53,10 @@ body {
 .key-container button:nth-child(20),
 .key-container button:nth-child(28) {
   width: 68px;
+}
+
+.key-container button:nth-child(28) {
+  font-size: 30px;
 }
 
 .tile-container div {
@@ -68,7 +76,7 @@ body {
 
 .message-container {
   height: 30px;
-  padding-top: 15px;
+  padding: 25px 0;
 }
 
 .message-container p {
@@ -78,4 +86,33 @@ body {
   margin: 0;
 }
 
-/* 49:21 */
+.tile.flip {
+  animation: 0.5s linear flipping;
+}
+
+@keyframes flipping {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.grey-overlay {
+  background-color: #3a3a3c !important;
+  border: none !important;
+}
+
+.yellow-overlay {
+  background-color: #b59f3a !important;
+  border: none !important;
+}
+
+.green-overlay {
+  background-color: #538d4e !important;
+  border: none !important;
+}
